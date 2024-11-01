@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Angel Molina - About Me</title>
+</head>
+<body style="margin:0; padding:0; background-color:#f4f4f4; font-family:Arial, sans-serif;">
+
+<style>
+    * {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    /* Responsive font sizes */
+    h1, h2, p {
+        font-size: clamp(0.6rem, 1.5vw, 1rem);
+    }
+
+
+    .mainTitle {
+        font-weight: 700;
+        font-size: 3rem;
+        padding: 0 10%;
+        text-align: center;
+        color: #034742;
+    }
+
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .motherBox {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        border: solid 1.3rem #1a696e;
+        border-radius: 0.5rem;
+        background: linear-gradient(45deg, rgba(2, 0, 36, 1) 0%, rgba(15, 136, 150, 1) 65%, rgba(0, 212, 255, 1) 100%);
+        padding: 5%;
+        box-sizing: border-box;
+    }
+
+    .subTitle {
+        text-align: center;
+        font-weight: 600;
+        margin-top: 2%;
+        font-size: 2rem;
+        color: #d9eafd;
+        margin-bottom: 4%;
+    }
+
+    .introductionVideo {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .linksContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: fit-content;
+        padding: 2%;
+        margin: 5% 0 5% 35%;
+        border-radius: 2rem;
+        background-color: #1d78df;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.61), 0 4px 6px -4px rgba(0, 0, 0, 0.61);
+    }
+
+    .accessLink {
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 1.2rem;
+        transition: all 400ms;
+        color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .accessLink:hover {
+        transform: scale(1.08);
+        color: #3bc1f7;
+    }
+
+    .accessImage {
+        width: 80px;
+        height: 0px;
+    }
+
+    .infoSection {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        gap: 4%;
+        flex-wrap: wrap;
+    }
+
+    .aboutMeBox {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 600px;
+        gap: 3%;
+        text-align: center;
+    }
+
+    .infoImage {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        border-radius: 1.3rem;
+    }
+
+    .infoText {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #ccfff2;
+        text-align: center;
+    }
+
+    .mainSpan {
+        color: #3f90ec;
+    }
+
+    .socialMediaLink {
+        width: 100px;
+        height: fit-content;
+        transition: all 400ms;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-decoration: none;
+        font-weight: 600;
+        color: #ffffff;
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    .socialMediaLink:hover {
+        transform: scale(1.08);
+        color: #41d7e2;
+    }
+
+    .socialMediaLogo {
+        width: 80px;
+        height: auto;
+    }
+
+    .logoContainer {
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        gap: 2%;
+        padding: 1%;
+        margin-top: 5%;
+        border-radius: 2rem;
+        background-color: #1d78df;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.61), 0 4px 6px -4px rgba(0, 0, 0, 0.61);
+    }
+
+    .skillsContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1%;
+        width: 100%;
+    }
+
+    .skillLink {
+        transition: all 400ms;
+        text-decoration: none;
+        font-size: large;
+        text-align: center;
+        width: 48%;
+        max-width: 180px;
+        border-radius: 1rem;
+        background-color: #1d78df;
+        padding: 0.5rem;
+        font-weight: 900;
+        color: whitesmoke;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0.5rem;
+        box-sizing: border-box;
+    }
+
+    .skillLink:hover {
+        transform: scale(1.04);
+        color: #70fd9a;
+    }
+
+    .imageSkill {
+        width: 70px;
+        height: auto;
+    }
+
+    .projectCard{
+        width: 380px;
+        height: 320px;
+        border-radius: 1rem;
+        padding: 1%;
+        background-color: #136662;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2%;
+        border: solid 1rem #063f3f;
+    }
+
+    .projectLink{
+        font-weight: 800;
+        color: whitesmoke;
+        border-radius: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: clamp(0.8rem, 1.7vw, 1.7rem);
+        text-align: center;
+        text-decoration: none;
+        transition: all 400ms;
+    }
+
+    .projectLink:hover{
+        scale: 1.06;
+        color: #41d7e2;
+    }
+
+    .projectImage{
+        width: 320px;
+        height: 220px;
+        margin-bottom: 8%;
+        transition: all 400ms;
+        border-radius: 0.8rem;
+    }
+
+    .projectImage:hover{
+        scale: 1.06;
+    }
+
+    .projectsContainer{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 50%;
+        align-items: center;
+        justify-content: center;
+        gap: 3%;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+        .mainTitle {
+            font-size: 2.5rem;
+        }
+
+        .subTitle {
+            font-size: 1.8rem;
+        }
+
+        .skillLink {
+            width: 100%;
+            max-width: 150px;
+        }
+
+        .aboutMeBox {
+            flex-direction: column;
+        }
+
+        .projectsContainer{
+            flex-flow: column;
+        }
+        
+        .logoContainer{
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .linksContainer{
+            margin-left: 22%;
+        }
+
+    }
+
+    @media (max-width: 480px) {
+        .mainTitle {
+            font-size: 2rem;
+        }
+
+        .subTitle {
+            font-size: 1.6rem;
+        }
+
+        .skillLink {
+            width: 100%;
+            font-size: 1rem;
+        }
+
+        .infoText {
+            font-size: 1.2rem;
+        }
+
+        .projectCard{
+            width: 260px;
+            height: 240px;
+        }
+
+        .projectImage{
+            width: 220px;
+            height: 200px;
+        }
+
+    }
+</style>
+

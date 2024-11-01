@@ -4,313 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Angel Molina - Web Developer</title>
-
-    <style>
-        * {
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        }
     
-        /* Responsive font sizes */
-        h1, h2, p {
-            font-size: clamp(0.6rem, 1.5vw, 1rem);
-        }
-    
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-    
-        .mainTitle {
-            font-weight: 700;
-            font-size: 3rem;
-            padding: 0 10%;
-            text-align: center;
-            color: #034742;
-        }
-    
-        .motherBox {
-            display: flex;
-            flex-direction: column;
-            width: 100vw;
-            align-items: center;
-            border: solid 1.3rem #1a696e;
-            border-radius: 0.5rem;
-            background: linear-gradient(45deg, rgba(2, 0, 36, 1) 0%, rgba(15, 136, 150, 1) 65%, rgba(0, 212, 255, 1) 100%);
-            padding: 5%;
-            box-sizing: border-box;
-        }
-    
-        .subTitle {
-            text-align: center;
-            font-weight: 600;
-            margin-top: 2%;
-            font-size: 2rem;
-            color: #d9eafd;
-            margin-bottom: 4%;
-        }
-    
-        .introductionVideo {
-            width: 100%;
-            max-width: 300px;
-            height: auto;
-        }
-    
-        .linksContainer {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: fit-content;
-            padding: 2%;
-            margin: 5% 0 5% 5%;
-            border-radius: 2rem;
-            background-color: #1d78df;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.61), 0 4px 6px -4px rgba(0, 0, 0, 0.61);
-        }
-    
-        .accessLink {
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.2rem;
-            transition: all 400ms;
-            color: #ffffff;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-    
-        .accessLink:hover {
-            transform: scale(1.08);
-            color: #3bc1f7;
-        }
-    
-        .accessImage {
-            width: 80px;
-            height: 0px;
-        }
-    
-        .infoSection {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-content: center;
-            gap: 4%;
-            flex-wrap: wrap;
-        }
-    
-        .aboutMeBox {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            max-width: 600px;
-            gap: 3%;
-            text-align: center;
-        }
-    
-        .infoImage {
-            width: 100%;
-            max-width: 200px;
-            height: auto;
-            border-radius: 1.3rem;
-        }
-    
-        .infoText {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #ccfff2;
-            text-align: center;
-        }
-    
-        .mainSpan {
-            color: #3f90ec;
-        }
-    
-        .socialMediaLink {
-            width: 100px;
-            height: fit-content;
-            transition: all 400ms;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            text-decoration: none;
-            font-weight: 600;
-            color: #ffffff;
-            font-size: 1.1rem;
-            text-align: center;
-        }
-    
-        .socialMediaLink:hover {
-            transform: scale(1.08);
-            color: #41d7e2;
-        }
-    
-        .socialMediaLogo {
-            width: 80px;
-            height: auto;
-        }
-    
-        .logoContainer {
-            display: flex;
-            align-items: center;
-            width: fit-content;
-            gap: 2%;
-            padding: 1%;
-            margin-top: 5%;
-            border-radius: 2rem;
-            background-color: #1d78df;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.61), 0 4px 6px -4px rgba(0, 0, 0, 0.61);
-        }
-    
-        .skillsContainer {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1%;
-            width: 100%;
-        }
-    
-        .skillLink {
-            transition: all 400ms;
-            text-decoration: none;
-            font-size: large;
-            width: 48%;
-            max-width: 180px;
-            border-radius: 1rem;
-            background-color: #1d78df;
-            padding: 0.5rem;
-            font-weight: 900;
-            color: whitesmoke;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 0.5rem;
-            box-sizing: border-box;
-        }
-    
-        .skillLink:hover {
-            transform: scale(1.04);
-            color: #70fd9a;
-        }
-    
-        .imageSkill {
-            width: 70px;
-            height: auto;
-        }
-
-        .projectCard{
-                width: 48%;
-                max-width: 350px;
-                height: 45%;
-                max-height: 300px;
-                border-radius: 2rem;
-                padding: 1%;
-                color: #1d78df;
-                display: flex;
-                flex-flow: column;
-                justify-content: center;
-                align-items: center;
-            }
-
-            .projectLink{
-                font-weight: 800;
-                color: whitesmoke;
-                background-color: #034742;
-                border-radius: 1rem;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
-            .projectImage{
-                width: 300px;
-                height: 250px;
-            }
-    
-        /* Responsive Styles */
-        @media (max-width: 768px) {
-            .mainTitle {
-                font-size: 2.5rem;
-            }
-    
-            .subTitle {
-                font-size: 1.8rem;
-            }
-    
-            .skillLink {
-                width: 100%;
-                max-width: 150px;
-            }
-    
-            .aboutMeBox {
-                flex-direction: column;
-            }
-        }
-    
-        @media (max-width: 480px) {
-            .mainTitle {
-                font-size: 2rem;
-            }
-    
-            .subTitle {
-                font-size: 1.6rem;
-            }
-    
-            .skillLink {
-                width: 100%;
-                font-size: 1rem;
-            }
-    
-            .infoText {
-                font-size: 1.2rem;
-            }
-
-        }
-    </style>
-    
-
-
 </head>
-<body class="font-sans">
 
+<body class="font-sans">
 
     <div class = "motherBox" >
 
         <h1 class = "mainTitle"> <strong class = "mainSpan">Hi James!</strong><span style="margin-left: 6%;"></span>, I'm Angel and i would like to know more about you</h1>
 
-        <h2 class = "subTitle">Here you can see more about me!</h2>
-
-
         <div class = "infoBoxContainer">
 
                 <div class = "aboutMeBox" style="grid-area: 1/1/1/1;">
 
-                    <img src="./photo_2024-10-20_17-07-13.jpg" alt="" class = "infoImage">
+                    <img src="https://ik.imagekit.io/qr7w3vvc04/photo_2024-10-20_17-07-13.jpg?updatedAt=1730207652047" alt="" class = "infoImage">
                     <p class = 'infoText'>I'm a <strong class = "infoStrong">Software Developer</strong>, focused in <strong class = "infoStrong">Web Development</strong>, with a <strong class = "infoStrong">Microsoft Certification</strong>. I'm <strong class = "infoStrong">bilingual </strong>, native spanish and with a C3 english level.</p>
     
                 </div>
+
+                <h2 class = "subTitle">Here you can see more about me!</h2>
+
+                <p class = "linksContainer">
+
+                    <a style="grid-area: 1/1;" class = "accessLink" href="https://youtu.be/CY753jJ9z9w">
+                        <svg style = 'margin-bottom:7%;' version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 303.188 303.188" xml:space="preserve" fill="#000000" class = "socialMediaLink"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <polygon style="fill:#E8E8E8;" points="219.821,0 32.842,0 32.842,303.188 270.346,303.188 270.346,50.525 "></polygon> <g> <rect x="90.902" y="61.704" style="fill:#38A3FF;" width="119.89" height="119.89"></rect> <circle style="fill:#FFFFFF;" cx="150.847" cy="121.648" r="45.484"></circle> <path style="fill:#38A3FF;" d="M144.439,143.105c-4.145,2.682-7.537,0.837-7.537-4.1v-34.711c0-4.938,3.392-6.783,7.537-4.102 l25.622,16.579c4.146,2.683,4.146,7.073,0,9.754L144.439,143.105z"></path> </g> <polygon style="fill:#38A3FF;" points="227.64,25.263 32.842,25.263 32.842,0 219.821,0 "></polygon> <g> <path style="fill:#A4A9AD;" d="M103.524,273.871l-9.813-34.557h-0.295c0.46,5.886,0.69,10.458,0.69,13.718v20.839H82.62v-47.979 h17.262l10.009,34.065h0.263l9.813-34.065h17.295v47.979h-11.913v-21.036c0-1.094,0.017-2.308,0.049-3.643 c0.033-1.334,0.181-4.605,0.443-9.813h-0.295l-9.681,34.491h-12.341V273.871z"></path> <path style="fill:#A4A9AD;" d="M182.418,241.152c0,5.361-1.581,9.501-4.742,12.421c-3.162,2.921-7.652,4.381-13.472,4.381h-3.643 v15.917h-12.963v-47.979h16.605c6.06,0,10.61,1.324,13.652,3.971C180.896,232.51,182.418,236.273,182.418,241.152z M160.562,247.387h2.362c1.947,0,3.495-0.546,4.643-1.641c1.149-1.094,1.724-2.604,1.724-4.529c0-3.238-1.795-4.857-5.383-4.857 h-3.347L160.562,247.387L160.562,247.387z"></path> <path style="fill:#A4A9AD;" d="M223.242,264.583h-5.283v9.288H205.16v-9.288h-19.133v-9.517l19.953-29.175h11.979v29.011h5.283 L223.242,264.583L223.242,264.583z M205.16,254.902v-5.579c0-1.05,0.038-2.467,0.115-4.25c0.076-1.783,0.136-2.718,0.18-2.806 h-0.36c-0.744,1.685-1.587,3.26-2.527,4.726l-5.316,7.909H205.16z"></path> </g> <polygon style="fill:#D1D3D3;" points="219.821,50.525 270.346,50.525 219.821,0 "></polygon> </g> </g></svg>
+                        Introduction video
+                    </a>
+    
+                </p>
 
                 <div class = "logoContainer" style="grid-area: 2/1/2/1; align-self: start; justify-self: center; margin-left: 2%;">
                     <a href="https://www.instagram.com/angeltech090/" class = "socialMediaLink">
                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48" class = "socialMediaLogo">
                             <radialGradient id="yOrnnhliCrdS2gy~4tD8ma_Xy10Jcu1L2Su_gr1" cx="19.38" cy="42.035" r="44.899" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fd5"></stop><stop offset=".328" stop-color="#ff543f"></stop><stop offset=".348" stop-color="#fc5245"></stop><stop offset=".504" stop-color="#e64771"></stop><stop offset=".643" stop-color="#d53e91"></stop><stop offset=".761" stop-color="#cc39a4"></stop><stop offset=".841" stop-color="#c837ab"></stop></radialGradient><path fill="url(#yOrnnhliCrdS2gy~4tD8ma_Xy10Jcu1L2Su_gr1)" d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z"></path><radialGradient id="yOrnnhliCrdS2gy~4tD8mb_Xy10Jcu1L2Su_gr2" cx="11.786" cy="5.54" r="29.813" gradientTransform="matrix(1 0 0 .6663 0 1.849)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#4168c9"></stop><stop offset=".999" stop-color="#4168c9" stop-opacity="0"></stop></radialGradient><path fill="url(#yOrnnhliCrdS2gy~4tD8mb_Xy10Jcu1L2Su_gr2)" d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z"></path><path fill="#fff" d="M24,31c-3.859,0-7-3.14-7-7s3.141-7,7-7s7,3.14,7,7S27.859,31,24,31z M24,19c-2.757,0-5,2.243-5,5	s2.243,5,5,5s5-2.243,5-5S26.757,19,24,19z"></path><circle cx="31.5" cy="16.5" r="1.5" fill="#fff"></circle><path fill="#fff" d="M30,37H18c-3.859,0-7-3.14-7-7V18c0-3.86,3.141-7,7-7h12c3.859,0,7,3.14,7,7v12	C37,33.86,33.859,37,30,37z M18,13c-2.757,0-5,2.243-5,5v12c0,2.757,2.243,5,5,5h12c2.757,0,5-2.243,5-5V18c0-2.757-2.243-5-5-5H18z"></path>
-                    </svg>
+                        </svg>
                             My instagram
                     </a>
 
-                    <a href="https://www.freelancer.com/u/Sayaverde" class = "socialMediaLink">
-                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48" class = "socialMediaLogo">
-                            <path fill="#42a5f5" d="M2.141 34l3.771 6.519.001.001C6.656 41.991 8.18 43 9.94 43l.003 0 0 0h25.03l-5.194-9H2.141zM45.859 34.341c0-.872-.257-1.683-.697-2.364L30.977 7.319C30.245 5.94 28.794 5 27.124 5h-7.496l21.91 37.962 3.454-5.982C45.673 35.835 45.859 35.328 45.859 34.341zM25.838 28L16.045 11.038 6.252 28z"></path>
-                            </svg>
-                            Freelancer profile
+                    <a href="https://discord.gg/C5KVWW4g)https://www.freelancer.com/u/Sayaverde" class = "socialMediaLink">
+                        <img src="https://ik.imagekit.io/qr7w3vvc04/image.png?updatedAt=1730221057711" alt="Discord logo" class = "socialMediaLogo">
+                            Discord Contact
                     </a>
 
-                    <a href="https://www.fiverr.com/augusto69/buying?source=avatar_menu_profile" class = "socialMediaLink">
-                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48" class = "socialMediaLogo">
-                            <circle cx="24" cy="24" r="20" fill="#66bb6a"></circle><path fill="#fff" d="M35.066,22.035v-0.959h-1.821l-0.8-0.014c-0.684,0-1.151,0.45-1.335,0.974v-0.959h-2.039V27.3 h2.039v-1.334v-2.066c0-0.62,0.503-1.123,1.123-1.123h0.795v4.523h2.039v-1.334v-2.066c0-0.62,0.503-1.123,1.123-1.123h1.012v-1.7 l-0.8-0.014C35.718,21.061,35.25,21.512,35.066,22.035z M20.56,21.206l-1.094,3.597l-1.093-3.597h-2.039l2.215,6.223h0.12h1.597 h0.12l2.213-6.223H20.56z M12.23,21.206v-0.415c0-0.364,0.294-0.658,0.658-0.658h1.287v-1.706h-1.767 c-1.223,0-2.216,0.991-2.216,2.216v0.564H9v1.649h1.192v4.572h2.039v-4.572h1.944v4.572h2.039v-4.572v-1.649h-2.039H12.23V21.206z M25.424,21.122h-0.248c-1.67,0-3.024,1.354-3.024,3.024v0.342c0,1.67,1.354,3.024,3.024,3.024h0.552 c1.143,0,2.122-0.706,2.524-1.705l-1.798-0.525c0,0-0.215,0.616-0.965,0.616c-0.847,0-1.295-0.463-1.354-0.989l0,0v-0.003 c-0.004-0.038-0.006-0.077-0.006-0.115h2.3h2.022v-0.643C28.448,22.476,27.094,21.122,25.424,21.122z M24.13,23.59 c0.025-0.559,0.485-1.006,1.051-1.006h0.194c0.565,0,1.026,0.446,1.051,1.006H24.13z"></path><circle cx="38.852" cy="26.305" r="1.268" fill="#263238"></circle>
-                        </svg>
-                        Fiverr profile
+                    <a href="https://www.facebook.com/profile.php?id=61555939933643" class = "socialMediaLink">
+                        
+                        <img src="https://ik.imagekit.io/qr7w3vvc04/image.png?updatedAt=1730168618364" alt="Facebook logo" class = "socialMediaLogo">
+
+                        Facebook profile
 
                     </a>
 
@@ -335,17 +75,8 @@
                 </div>
 
         </div>
-            
-        <div class = "linksContainer">
-
-                <a style="grid-area: 1/1;" class = "accessLink" href="https://youtu.be/CY753jJ9z9w">
-                    <svg style = 'margin-bottom:7%;' version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 303.188 303.188" xml:space="preserve" fill="#000000" class = "socialMediaLink"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <polygon style="fill:#E8E8E8;" points="219.821,0 32.842,0 32.842,303.188 270.346,303.188 270.346,50.525 "></polygon> <g> <rect x="90.902" y="61.704" style="fill:#38A3FF;" width="119.89" height="119.89"></rect> <circle style="fill:#FFFFFF;" cx="150.847" cy="121.648" r="45.484"></circle> <path style="fill:#38A3FF;" d="M144.439,143.105c-4.145,2.682-7.537,0.837-7.537-4.1v-34.711c0-4.938,3.392-6.783,7.537-4.102 l25.622,16.579c4.146,2.683,4.146,7.073,0,9.754L144.439,143.105z"></path> </g> <polygon style="fill:#38A3FF;" points="227.64,25.263 32.842,25.263 32.842,0 219.821,0 "></polygon> <g> <path style="fill:#A4A9AD;" d="M103.524,273.871l-9.813-34.557h-0.295c0.46,5.886,0.69,10.458,0.69,13.718v20.839H82.62v-47.979 h17.262l10.009,34.065h0.263l9.813-34.065h17.295v47.979h-11.913v-21.036c0-1.094,0.017-2.308,0.049-3.643 c0.033-1.334,0.181-4.605,0.443-9.813h-0.295l-9.681,34.491h-12.341V273.871z"></path> <path style="fill:#A4A9AD;" d="M182.418,241.152c0,5.361-1.581,9.501-4.742,12.421c-3.162,2.921-7.652,4.381-13.472,4.381h-3.643 v15.917h-12.963v-47.979h16.605c6.06,0,10.61,1.324,13.652,3.971C180.896,232.51,182.418,236.273,182.418,241.152z M160.562,247.387h2.362c1.947,0,3.495-0.546,4.643-1.641c1.149-1.094,1.724-2.604,1.724-4.529c0-3.238-1.795-4.857-5.383-4.857 h-3.347L160.562,247.387L160.562,247.387z"></path> <path style="fill:#A4A9AD;" d="M223.242,264.583h-5.283v9.288H205.16v-9.288h-19.133v-9.517l19.953-29.175h11.979v29.011h5.283 L223.242,264.583L223.242,264.583z M205.16,254.902v-5.579c0-1.05,0.038-2.467,0.115-4.25c0.076-1.783,0.136-2.718,0.18-2.806 h-0.36c-0.744,1.685-1.587,3.26-2.527,4.726l-5.316,7.909H205.16z"></path> </g> <polygon style="fill:#D1D3D3;" points="219.821,50.525 270.346,50.525 219.821,0 "></polygon> </g> </g></svg>
-                    Introduction video
-                </a>
-    
-        </div>
         
-        <h2 class="subTitle" style="margin-top: 5%; margin-bottom: 2%;">There are all my skills!</h2>
+        <h2 class="subTitle" style="margin-top: 3%; margin-bottom: 2%;">There are all my skills!</h2>
 
         <div class = "skillsContainer">
 
@@ -406,7 +137,7 @@
 
             <a href="https://github.com/AngelTech90/Python_notes" class = "skillLink">
                 <img class = 'imageSkill' src=" https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/python/python-original.svg" alt="Python Logo" />
-                Python repo
+                Python repo 
             </a>
 
             <a href="https://github.com/AngelTech90/TypeScript" class = "skillLink">
@@ -419,7 +150,7 @@
                 Git notes
             </a>
 
-            <a href="https://github.com/AngelTech90/JavaScript_Notes-1" class = "skillLink">
+            <a href="https://drive.google.com/file/d/1LI54QtFoHRr_hScBR2Qmr4A6cxH3Su3z/view?usp=drive_link" class = "skillLink">
                 <img class = 'imageSkill' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux Logo" />
                 Linux Notes
             </a>
@@ -449,82 +180,424 @@
         <h2 class="subTitle" style="margin-top: 5%; margin-bottom: 2%;">Soft Skills:</h2>
 
         <div class = "skillsContainer">
-            <a href="https://github.com/Equipo-dCreations/landing-cafeteria" class = "skillLink">
-                <img class = 'imageSkill' src="https://raw.githubusercontent.com/devicons/devicon/refs/tags/v2.16.0/icons/astro/astro-original.svg" alt = 'AstroJS'/>
+            <a href="https://github.com/Equipo-dCreations/landing-cafeteria" class = "skillLink" style="background-color: #0daedf;">
+                <img class = 'imageSkill' src="https://ik.imagekit.io/qr7w3vvc04/image.png?updatedAt=1730151935936" alt = 'Excel logo'/>
                 Excel notes
             </a>
 
-            <a href="https://github.com/AngelTech90/TailwindCSS-AlpineJS" class = "skillLink">
+            <a href="/https://angeltech90.github.io/Notion_practices/" class = "skillLink" style="background-color: #0daedf;">
                 <img class = 'imageSkill' src="https://raw.githubusercontent.com/tandpfun/skill-icons/refs/heads/main/icons/Notion-Dark.svg" alt = 'AlpineJS'/>
                 Notion portfolio
             </a>
 
 
-            <a href="https://www.credly.com/badges/e20d4787-7709-460c-acff-3881127db023/public_url" class = "skillLink">
+            <a href="https://www.credly.com/badges/e20d4787-7709-460c-acff-3881127db023/public_url" class = "skillLink" style="background-color: #0daedf;">
                 <img class = 'imageSkill' src="https://raw.githubusercontent.com/tandpfun/skill-icons/refs/heads/main/icons/Azure-Dark.svg" alt = 'AlpineJS'/>
                 Azure Certification
             </a>
 
-            <a href="https://trello.com/invite/b/66a22ff31fc44e85cdc6082b/ATTI1841cee614fe862d586ef1513258fe3d39A14E8E/lupangos" class = "skillLink">
-                <img src="https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/javascript/javascript-original.svg" alt="" class = 'imageSkill'>
+            <a href="https://trello.com/invite/b/66a22ff31fc44e85cdc6082b/ATTI1841cee614fe862d586ef1513258fe3d39A14E8E/lupangos" class = "skillLink" style="background-color: #0daedf;">
+                <img src="https://ik.imagekit.io/qr7w3vvc04/image.png?updatedAt=1730153024959" alt="" class = 'imageSkill'>
                 Trello practices
             </a>
 
-            <a href="https://angelmolinaimas.atlassian.net/jira/software/projects/SCRUM/boards/1/backlog?atlOrigin=eyJpIjoiNjljYTBkNDNjMDBjNGQ3NGIzNGM5YmEyNjBhOTc0Y2YiLCJwIjoiaiJ9" class = "skillLink">
-                <img class = 'imageSkill' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS Logo" />
+            <a href="https://angelmolinaimas.atlassian.net/jira/software/projects/SCRUM/boards/1/backlog?atlOrigin=eyJpIjoiNjljYTBkNDNjMDBjNGQ3NGIzNGM5YmEyNjBhOTc0Y2YiLCJwIjoiaiJ9" class = "skillLink" style="background-color: #0daedf;">
+                <img class = 'imageSkill' src="https://ik.imagekit.io/qr7w3vvc04/image(1).png?updatedAt=1730153024842" alt="Jira Logo" />
                 Jira practices
             </a>
 
-            <a href="https://angeltech90.github.io/Gim_portfolio/" class = "skillLink">
-                <img class = 'imageSkill' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML Logo" />
+            <a href="https://angeltech90.github.io/Gim_portfolio/" class = "skillLink" style="background-color: #0daedf;">
+                <img class = 'imageSkill' src="https://ik.imagekit.io/qr7w3vvc04/image(5).png?updatedAt=1730153025126" alt="Gimp Logo" />
                 Gimp portfolio
             </a>
 
-            <a href="https://drive.google.com/file/d/1SCXrr8O_kwNDWvj2aNHE6ASrKH7ozPrG/view?usp=drive_link" class = "skillLink">
-                <img class = 'imageSkill' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg" alt="Bootstrap Logo" />
+            <a href="https://drive.google.com/file/d/1SCXrr8O_kwNDWvj2aNHE6ASrKH7ozPrG/view?usp=drive_link" class = "skillLink" style="background-color: #0daedf;">
+                <img class = 'imageSkill' src="https://ik.imagekit.io/qr7w3vvc04/image(6).png?updatedAt=1730153024871" alt="Draw.io Logo" />
                 Draw.io practices
             </a>
 
-            <a href="https://app.clickup.com/9012299151/v/dc/8cjthcf-2032" class = "skillLink">
-                <img class = 'imageSkill' src="https://raw.githubusercontent.com/devicons/devicon/refs/tags/v2.16.0/icons/tailwindcss/tailwindcss-original.svg" alt="TailwindCSS Logo" />
+            <a href="https://app.clickup.com/9012299151/v/dc/8cjthcf-2032" class = "skillLink" style="background-color: #0daedf;">
+                <img class = 'imageSkill' src="https://ik.imagekit.io/qr7w3vvc04/image.png?updatedAt=1730237610639" alt="ClickUp Logo" />
                 ClickUp practices
             </a>
+
+            <a href="https://github.com/Equipo-dCreations/landing-cafeteria" class = "skillLink" style="background-color: #0daedf;">
+                <img class = 'imageSkill' src="https://ik.imagekit.io/qr7w3vvc04/image.png?updatedAt=1730153546175" alt = 'Canva Logo'/>
+                Canva portfolio
+            </a>
+
+            <a href="https://github.com/Equipo-dCreations/landing-cafeteria" class = "skillLink" style="background-color: #0daedf;">
+                <img class = 'imageSkill' src="https://ik.imagekit.io/qr7w3vvc04/image(2).png?updatedAt=1730153024793" alt = 'PowerPoint Logo'/>
+                PowerPoint portfolio
+            </a>
+
+            <a href="https://github.com/Equipo-dCreations/landing-cafeteria" class = "skillLink" style="background-color: #0daedf;">
+                <img class = 'imageSkill' src="https://ik.imagekit.io/qr7w3vvc04/image(3).png?updatedAt=1730153024845" alt = 'Word notes'/>
+                Word notes
+            </a>
+
+
         </div>
 
         <h2 class="subTitle" style="margin-top: 5%; margin-bottom: 2%;">There are my public projects!</h2>
 
-        <!-- Projects container: -->
         <div class = "projectsContainer">
             <div class="projectCard">
-                <img src="../images/buscadis.png" alt="" class = 'projectImage'>
+                <a href="">
+                    <img src="https://ik.imagekit.io/qr7w3vvc04/Publicadis.png?updatedAt=1730207652095" alt="" class = 'projectImage'>
+                </a>
                 <a href="" class = "projectLink">Publicadis Landing page</a>
             </div>
 
             <div class="projectCard">
-                <img src="../images/buscadis.png" alt="" class = 'projectImage'>
+                <a href="">
+                    <img src="https://ik.imagekit.io/qr7w3vvc04/buscadis.png?updatedAt=1730207652319" alt="" class = 'projectImage'>
+                </a>
                 <a href="" class = "projectLink">Buscadis eComerce</a>
             </div>
 
             <div class="projectCard">
-                <img src="../images/buscadis.png" alt="" class = 'projectImage'>
+                <a href="">
+                    <img src="https://ik.imagekit.io/qr7w3vvc04/ARTSIO.jpg?updatedAt=1730207651836" alt="" class = 'projectImage'>
+                </a>
                 <a href="" class = "projectLink">RUNNERTAG website</a>
             </div>
 
             <div class="projectCard">
-                <img src="../images/buscadis.png" alt="" class = 'projectImage'>
+                <a href="">
+                    <img src="https://ik.imagekit.io/qr7w3vvc04/dCreations.png?updatedAt=1730207651552" alt="" class = 'projectImage'>
+                </a>
                 <a href="" class = "projectLink">dCreations project page</a>
             </div>
 
             <div class="projectCard">
-                <img src="../images/buscadis.png" alt="" class = 'projectImage'>
+                <a href="">
+                    <img src="https://ik.imagekit.io/qr7w3vvc04/RunnerTag.png?updatedAt=1730207652525" alt="" class = 'projectImage'>
+                </a>
                 <a href="" class = "projectLink">ARTSIO website</a>
             </div>
         </div>
+
+        <style>
+            * {
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+        
+            /* Responsive font sizes */
+            h1, h2, p {
+                font-size: clamp(0.6rem, 1.5vw, 1rem);
+            }
+        
+        
+            .mainTitle {
+                font-weight: 700;
+                font-size: 3rem;
+                padding: 0 10%;
+                text-align: center;
+                color: #034742;
+            }
+    
+            body{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        
+            .motherBox {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                align-items: center;
+                border: solid 1.3rem #1a696e;
+                border-radius: 0.5rem;
+                background: linear-gradient(45deg, rgba(2, 0, 36, 1) 0%, rgba(15, 136, 150, 1) 65%, rgba(0, 212, 255, 1) 100%);
+                padding: 5%;
+                box-sizing: border-box;
+            }
+        
+            .subTitle {
+                text-align: center;
+                font-weight: 600;
+                margin-top: 2%;
+                font-size: 2rem;
+                color: #d9eafd;
+                margin-bottom: 4%;
+            }
+        
+            .introductionVideo {
+                width: 100%;
+                max-width: 300px;
+                height: auto;
+            }
+        
+            .linksContainer {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: fit-content;
+                padding: 2%;
+                margin: 5% 0 5% 35%;
+                border-radius: 2rem;
+                background-color: #1d78df;
+                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.61), 0 4px 6px -4px rgba(0, 0, 0, 0.61);
+            }
+        
+            .accessLink {
+                text-decoration: none;
+                font-weight: 700;
+                font-size: 1.2rem;
+                transition: all 400ms;
+                color: #ffffff;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        
+            .accessLink:hover {
+                transform: scale(1.08);
+                color: #3bc1f7;
+            }
+        
+            .accessImage {
+                width: 80px;
+                height: 0px;
+            }
+        
+            .infoSection {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                gap: 4%;
+                flex-wrap: wrap;
+            }
+        
+            .aboutMeBox {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                max-width: 600px;
+                gap: 3%;
+                text-align: center;
+            }
+        
+            .infoImage {
+                width: 100%;
+                max-width: 200px;
+                height: auto;
+                border-radius: 1.3rem;
+            }
+        
+            .infoText {
+                font-size: 1.5rem;
+                font-weight: 700;
+                color: #ccfff2;
+                text-align: center;
+            }
+        
+            .mainSpan {
+                color: #3f90ec;
+            }
+        
+            .socialMediaLink {
+                width: 100px;
+                height: fit-content;
+                transition: all 400ms;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                text-decoration: none;
+                font-weight: 600;
+                color: #ffffff;
+                font-size: 1.1rem;
+                text-align: center;
+            }
+        
+            .socialMediaLink:hover {
+                transform: scale(1.08);
+                color: #41d7e2;
+            }
+        
+            .socialMediaLogo {
+                width: 80px;
+                height: auto;
+            }
+        
+            .logoContainer {
+                display: flex;
+                align-items: center;
+                width: fit-content;
+                gap: 2%;
+                padding: 1%;
+                margin-top: 5%;
+                border-radius: 2rem;
+                background-color: #1d78df;
+                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.61), 0 4px 6px -4px rgba(0, 0, 0, 0.61);
+            }
+        
+            .skillsContainer {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1%;
+                width: 100%;
+            }
+        
+            .skillLink {
+                transition: all 400ms;
+                text-decoration: none;
+                font-size: large;
+                text-align: center;
+                width: 48%;
+                max-width: 180px;
+                border-radius: 1rem;
+                background-color: #1d78df;
+                padding: 0.5rem;
+                font-weight: 900;
+                color: whitesmoke;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 0.5rem;
+                box-sizing: border-box;
+            }
+        
+            .skillLink:hover {
+                transform: scale(1.04);
+                color: #70fd9a;
+            }
+        
+            .imageSkill {
+                width: 70px;
+                height: auto;
+            }
+    
+            .projectCard{
+                width: 380px;
+                height: 320px;
+                border-radius: 1rem;
+                padding: 1%;
+                background-color: #136662;
+                display: flex;
+                flex-flow: column;
+                justify-content: center;
+                align-items: center;
+                margin-top: 2%;
+                border: solid 1rem #063f3f;
+            }
+    
+            .projectLink{
+                font-weight: 800;
+                color: whitesmoke;
+                border-radius: 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: clamp(0.8rem, 1.7vw, 1.7rem);
+                text-align: center;
+                text-decoration: none;
+                transition: all 400ms;
+            }
+    
+            .projectLink:hover{
+                scale: 1.06;
+                color: #41d7e2;
+            }
+    
+            .projectImage{
+                width: 320px;
+                height: 220px;
+                margin-bottom: 8%;
+                transition: all 400ms;
+                border-radius: 0.8rem;
+            }
+    
+            .projectImage:hover{
+                scale: 1.06;
+            }
+    
+            .projectsContainer{
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                height: 50%;
+                align-items: center;
+                justify-content: center;
+                gap: 3%;
+            }
+        
+            /* Responsive Styles */
+            @media (max-width: 768px) {
+                .mainTitle {
+                    font-size: 2.5rem;
+                }
+        
+                .subTitle {
+                    font-size: 1.8rem;
+                }
+        
+                .skillLink {
+                    width: 100%;
+                    max-width: 150px;
+                }
+        
+                .aboutMeBox {
+                    flex-direction: column;
+                }
+    
+                .projectsContainer{
+                    flex-flow: column;
+                }
+                
+                .logoContainer{
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                }
+    
+                .linksContainer{
+                    margin-left: 22%;
+                }
+    
+            }
+        
+            @media (max-width: 480px) {
+                .mainTitle {
+                    font-size: 2rem;
+                }
+        
+                .subTitle {
+                    font-size: 1.6rem;
+                }
+        
+                .skillLink {
+                    width: 100%;
+                    font-size: 1rem;
+                }
+        
+                .infoText {
+                    font-size: 1.2rem;
+                }
+    
+                .projectCard{
+                    width: 260px;
+                    height: 240px;
+                }
+    
+                .projectImage{
+                    width: 220px;
+                    height: 200px;
+                }
+    
+            }
+        </style>
 
     </div>
 
     
 
 </body>
-</html> 
+</html>  
 
